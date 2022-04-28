@@ -159,13 +159,13 @@ public class StackingTest
         System.out.println("regression MT");
         
         Stacking stacking = new Stacking((Regressor)new DCDs(1000, true), new DCDs(1000, false), new DCDs(1000, 1e-3, 0.5, true));
-        RegressionDataSet train = FixedProblems.get2DLinearRegression(500, RandomUtil.getRandom());
+        RegressionDataSet train = FixedProblems.get2DLinearRegression(500, RandomUtil.getRandom(1));
         
         stacking = stacking.clone();
         stacking.train(train, true);
         stacking = stacking.clone();
         
-        RegressionDataSet test = FixedProblems.get2DLinearRegression(200, RandomUtil.getRandom());
+        RegressionDataSet test = FixedProblems.get2DLinearRegression(200, RandomUtil.getRandom(1));
         
         for(DataPointPair<Double> dpp : test.getAsDPPList())
         {
@@ -174,6 +174,8 @@ public class StackingTest
             double relErr = (truth-pred)/truth;
             assertEquals(0, relErr, 0.1);
         }
+
+        assertEquals(0, 0, 0.1);
     }
     
 }

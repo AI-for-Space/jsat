@@ -96,7 +96,7 @@ public class FixedProblems
      */
     public static ClassificationDataSet getSimpleKClassLinear(int dataSetSize, int K)
     {
-        return getSimpleKClassLinear(dataSetSize, K, RandomUtil.getRandom());
+        return getSimpleKClassLinear(dataSetSize, K, RandomUtil.getRandom(1));
     }
     /**
      * Generates a linearly separable multi class problem 
@@ -205,7 +205,7 @@ public class FixedProblems
     }
     public static ClassificationDataSet getCircles(int dataSetSize, double... radi )
     {
-        return getCircles(dataSetSize, RandomUtil.getRandom(), radi);
+        return getCircles(dataSetSize, RandomUtil.getRandom(1), radi);
     }
     
     public static ClassificationDataSet getCircles(int dataSetSize, Random rand, double... radi )

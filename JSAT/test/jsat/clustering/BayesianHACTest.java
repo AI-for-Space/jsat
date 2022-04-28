@@ -119,7 +119,7 @@ public class BayesianHACTest {
     {
         System.out.println("cluster_guass");
         
-        Random rand = RandomUtil.getRandom();
+        Random rand = RandomUtil.getRandom(1);
 
         
         GridDataGenerator gdg = new GridDataGenerator(new NormalClampedSample(0, 0.05), rand, 2, 2);

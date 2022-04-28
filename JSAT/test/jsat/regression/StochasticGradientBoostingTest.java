@@ -71,8 +71,8 @@ public class StochasticGradientBoostingTest
 
         StochasticGradientBoosting instance = new StochasticGradientBoosting(new DecisionTree(), 50);
 
-        RegressionDataSet train = FixedProblems.get2DLinearRegression(500, RandomUtil.getRandom());
-        RegressionDataSet test = FixedProblems.get2DLinearRegression(100, RandomUtil.getRandom());
+        RegressionDataSet train = FixedProblems.get2DLinearRegression(500, RandomUtil.getRandom(1));
+        RegressionDataSet test = FixedProblems.get2DLinearRegression(100, RandomUtil.getRandom(1));
 
         RegressionModelEvaluation rme = new RegressionModelEvaluation(instance, train);
         rme.evaluateTestSet(test);
@@ -88,8 +88,8 @@ public class StochasticGradientBoostingTest
 
         StochasticGradientBoosting instance = new StochasticGradientBoosting(new DecisionTree(), 50);
 
-        RegressionDataSet train = FixedProblems.get2DLinearRegression(500, RandomUtil.getRandom());
-        RegressionDataSet test = FixedProblems.get2DLinearRegression(100, RandomUtil.getRandom());
+        RegressionDataSet train = FixedProblems.get2DLinearRegression(500, RandomUtil.getRandom(1));
+        RegressionDataSet test = FixedProblems.get2DLinearRegression(100, RandomUtil.getRandom(1));
 
         RegressionModelEvaluation rme = new RegressionModelEvaluation(instance, train, true);
         rme.evaluateTestSet(test);
@@ -104,8 +104,8 @@ public class StochasticGradientBoostingTest
 
         StochasticGradientBoosting instance = new StochasticGradientBoosting(new DecisionTree(), 50);
 
-        RegressionDataSet t1 = FixedProblems.get2DLinearRegression(500, RandomUtil.getRandom());
-        RegressionDataSet t2 = FixedProblems.get2DLinearRegression(100, RandomUtil.getRandom());
+        RegressionDataSet t1 = FixedProblems.get2DLinearRegression(500, RandomUtil.getRandom(1));
+        RegressionDataSet t2 = FixedProblems.get2DLinearRegression(100, RandomUtil.getRandom(1));
         t2.applyTransform(new LinearTransform(t2, 1, 10));
 
         instance = instance.clone();
