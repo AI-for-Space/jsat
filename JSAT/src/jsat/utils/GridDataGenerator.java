@@ -67,7 +67,7 @@ public class GridDataGenerator
      */
     public GridDataGenerator(ContinuousDistribution noiseSource, int... dimensions)
     {
-        this(noiseSource, RandomUtil.getRandom(), dimensions);
+        this(noiseSource, RandomUtil.getRandom(1), dimensions);
     }
 
     /**

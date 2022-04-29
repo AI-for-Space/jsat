@@ -262,7 +262,7 @@ public class ZipfTest
     {
         System.out.println("max");
         
-        Random rand =RandomUtil.getRandom();
+        Random rand =RandomUtil.getRandom(1);
         //only test the 2 cases where mean and variance are well defined
         for(int i = 0; i < Zs.length/2; i++)
         {
