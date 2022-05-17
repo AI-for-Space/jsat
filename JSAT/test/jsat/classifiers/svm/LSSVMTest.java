@@ -181,7 +181,7 @@ public class LSSVMTest
     @Test()
     public void testTrainWarmR()
     {
-        RegressionDataSet train = FixedProblems.getSimpleRegression1(75, RandomUtil.getRandom());
+        RegressionDataSet train = FixedProblems.getSimpleRegression1(75, RandomUtil.getRandom(1));
         
         
         LSSVM warmModel = new LSSVM();

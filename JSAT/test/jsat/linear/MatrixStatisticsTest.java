@@ -61,7 +61,7 @@ public class MatrixStatisticsTest
     @Test
     public void testMCD()
     {
-        Random rand = RandomUtil.getRandom();
+        Random rand = RandomUtil.getRandom(1);
         Vec mainMean = new DenseVector(5);
         Matrix mainCov = Matrix.random(5, 5, rand);
         mainCov = mainCov.multiplyTranspose(mainCov);

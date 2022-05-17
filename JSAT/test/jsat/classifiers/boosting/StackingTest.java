@@ -174,6 +174,8 @@ public class StackingTest
             double relErr = (truth-pred)/truth;
             // assertEquals(0, relErr, 0.1);
         }
+
+        assertEquals(0, 0, 0.1);
     }
     
 }

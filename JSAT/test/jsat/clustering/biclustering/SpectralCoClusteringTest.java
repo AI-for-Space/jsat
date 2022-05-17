@@ -100,8 +100,8 @@ public class SpectralCoClusteringTest {
                 List<List<Integer>> col_assignments = new ArrayList<>();
                 instance.bicluster(dataSet, true_k, parallel, row_assignments, col_assignments);
 
-                //assertEquals(true_k, row_assignments.size());
-                //assertEquals(true_k, col_assignments.size());
+                // assertEquals(true_k, row_assignments.size());
+                // assertEquals(true_k, col_assignments.size());
                 double score = ConsensusScore.score(parallel, 
                         true_row_assingments, true_col_assingments, 
                         row_assignments, col_assignments);

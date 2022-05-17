@@ -70,7 +70,7 @@ public class GapStatisticTest
         int count = 0;
         do
         {
-            GridDataGenerator gdg = new GridDataGenerator(new NormalClampedSample(0.0, 0.05), RandomUtil.getRandom(), 2, 2);
+            GridDataGenerator gdg = new GridDataGenerator(new NormalClampedSample(0.0, 0.05), RandomUtil.getRandom(1), 2, 2);
             easyData10 = gdg.generateData(200);
             
             good = true;
