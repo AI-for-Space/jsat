@@ -594,7 +594,7 @@ public abstract class DataSet<Type extends DataSet>
      */
     public List<Type> randomSplit(double... splits)
     {
-        return randomSplit(RandomUtil.getRandom(), splits);
+        return randomSplit(RandomUtil.getRandom(1), splits);
     }
     
     /**
@@ -623,7 +623,7 @@ public abstract class DataSet<Type extends DataSet>
      */
     public List<Type> cvSet(int folds)
     {
-        return cvSet(folds, RandomUtil.getRandom());
+        return cvSet(folds, RandomUtil.getRandom(1));
     }
     
     /**
