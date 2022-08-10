@@ -67,7 +67,7 @@ public class GridDataGenerator
      */
     public GridDataGenerator(ContinuousDistribution noiseSource, int... dimensions)
     {
-        this(noiseSource, RandomUtil.getRandom(), dimensions);
+        this(noiseSource, RandomUtil.getRandom(1), dimensions);
     }
 
     /**
@@ -120,8 +120,10 @@ public class GridDataGenerator
         int totalClasses = 1;
         for(int d : dimensions)
             totalClasses *= d;
-        catDataInfo = new CategoricalData[] { new CategoricalData(totalClasses) } ;
-        List<DataPoint> dataPoints = new ArrayList<DataPoint>(totalClasses*samples);
+        catDataInfo = new CategoricalData[] { new CategoricalData(totalClasses) };
+        
+        List<DataPoint> dataPoints = new ArrayList<DataPoint>(totalClasses * samples);
+        
         int[] curClassPointer = new int[1];
                 
         for(int i = 0; i < dimensions[0]; i++)

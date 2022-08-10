@@ -251,7 +251,7 @@ public class StochasticGradientBoosting implements Regressor, Parameterized
         
         final int randSampleSize = (int) Math.round(resids.size()*trainingProportion);
         final List<DataPointPair<Double>> randSampleList = new ArrayList<>(randSampleSize);
-        final Random rand = RandomUtil.getRandom();
+        final Random rand = RandomUtil.getRandom(1);
 	IntList randOrder = IntList.range(resids.size());
 
         for(int iter = 0; iter < maxIterations; iter++)

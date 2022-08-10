@@ -30,7 +30,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <skipTests>false</skipTests><!--configured netbeans to set this to true when we ask the IDE to build -->
+        <skipTests>true</skipTests><!--configured netbeans to set this to true when we ask the IDE to build -->
         <additionalparam>-Xdoclint:none</additionalparam>
     </properties>
     <build>

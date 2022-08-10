@@ -335,15 +335,14 @@ public class FLAME extends ClustererBase implements Parameterized
             double maxVal = 0;
             for (int j = 0; j < fuzzy[i].length; j++)
             {
-                if (fuzzy[i][j] > maxVal)
-                {
+                if (fuzzy[i][j] > maxVal) {
                     maxVal = fuzzy[i][j];
                     pos = j;
                 }
             }
             
             if(pos == -1)//TODO how di this happen? Mark it as an outlier. Somehow your whole row became zeros to cause this
-                pos = CSOs.size();
+                pos = CSOs.size()-1;
             clusterCounts[pos]++;
             if (pos == CSOs.size())//outlier
                 pos = -1;
